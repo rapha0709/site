@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    font-family: "Arial";
+}
+
+
+h1{
+    font-size: 64px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 42px;
+    text-align: center;
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 42px;
+    margin: 5em;
+    text-align: justify;
+}
+
+.mesa{
+    top: 0;
+    min-height: 95px;
+    position: relative;
+    background-color: black;
+    width: 100%;
+    table-layout:fixed; 
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 1000;
+    }
+
+    .bu {
+        text-transform: uppercase;
+        box-shadow: 0 0 5px violet;
+        background-color: #2192FF;
+        border: none;
+        border-radius: 12px;
+        color: white;
+        padding: 10px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 32px;
+        margin: 4px 2px;
+        cursor: grab;
+        position: relative;
+        overflow: hidden;
+        transition: color 0.4s ease, background-color 0.4s ease;
+        transition: 0.4s ease;
+        z-index: 2;
+        letter-spacing: 1px;
+    }
+    
+    .bu:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #1f82df;
+        transition: left 0.4s ease;
+        z-index: 1;
+    }
+    
+    .bu:hover:before {
+        left: 0;
+    }
+    
+    .bu:hover {
+        letter-spacing: 2px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .bu:active {
+        cursor: grabbing;
+    }
+    
+    .bu a {
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        position: relative;
+        z-index: 3;
+    }
+    
+    .bu span {
+        position: relative;
+        z-index: 4;
+    }

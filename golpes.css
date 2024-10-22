@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Arial";
+  gap:45px;
+
+}
+
+.mesa{
+  top: 0;
+  min-height: 95px;
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  table-layout:fixed; 
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 1000;
+  }
+
+  .bu {
+    max-height: 40px;
+    min-width: 150px;
+    text-transform: uppercase;
+    box-shadow: 0 0 5px violet;
+    background-color: #2192FF;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 4px 2px;
+    cursor: grab;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease, background-color 0.4s ease;
+    transition: 0.4s ease;
+    z-index: 2;
+    letter-spacing: 1px;
+}
+
+.bu:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #1f82df;
+    transition: left 0.4s;
+    z-index: 1;
+}
+
+.bu:hover:before {
+    left: 0;
+}
+
+.bu:hover {
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+}
+
+.bu:active {
+    cursor: grabbing;
+}
+
+.bu a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+}
+
+.bu span {
+    position: relative;
+    z-index: 4;
+}
+
+.card {
+  
+  background-color: #fff;
+  width: 270px;
+  height: 380px;
+  border-radius: 12px;
+  box-shadow: 7px 7px 15px #aaaa;
+}
+.card img {
+  width: 100%;
+  height: 165px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 50%;
+}
+.card h1 {
+  font-size: 1.2rem;
+}
+.card h2 {
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: justify;
+  font-size: .8rem;
+  color: #343434aa;
+}
+.card .button {
+  box-shadow: 0 0 5px violet;
+  margin-top: 20px;
+  margin-bottom: -15px;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: #2192FF;
+  border: none;
+  padding: 15px;
+  width: 75%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  transition: 0.5s ease;
+}
+
+.card:hover{
+  cursor: pointer;
+}
+
+.card .button:hover {
+  letter-spacing: 4px;
+  background-color: #1f82df;
+  cursor: grab;
+}
+
+.card .button:active{
+  cursor: grabbing;
+}
+
+.card-border {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(133, 209, 19);
+  border-radius: 15px;
+  box-shadow: 5px 5px 22px rgba(0, 0, 0, 0.1);
+  transition: 0.4s ease;
+}
+
+.card-border:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.container{
+  justify-content: space-around;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+      flex-direction: column;
+      align-items: center;
+  }
+}
+  
+@media (max-width: 480px)  {
+  .bu {
+    
+      font-size: 20px; /* Diminui ainda mais o tamanho da fonte */
+      padding: 6px 16px; /* Ajusta o padding */
+  
+}
+  
+}
